@@ -1,0 +1,31 @@
+{
+  "name": "@my-org/shared-ui",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+  "./global.css": "./src/styles/global.css",
+  "./globals.css": "./src/styles/globals.css",
+    "./tailwind": "./tailwind.config.js"
+  },
+  "files": [
+    "dist",
+    "tailwind.config.js",
+    "src/styles/global.css"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "dev": "tsup src/index.ts --format esm --dts --watch"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  }
+}
