@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/** TESTING **/
 @font-face {
   font-family: 'Exo Soft';
   src: url('/fonts/Exo Soft W00 Regular.otf') format('opentype');
