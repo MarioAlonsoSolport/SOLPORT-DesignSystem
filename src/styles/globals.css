@@ -23,3 +23,10 @@
     scroll-behavior: smooth;
   }
 }
+
+@layer base {
+  body {
+    background-color: #113e61;
+    color: #dde89f;
+  }
+}
