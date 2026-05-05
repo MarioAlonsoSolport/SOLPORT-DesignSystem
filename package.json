@@ -9,22 +9,22 @@
     "./globals.css": "./dist/globals.css"
   },
   "files": [
-  "dist",
-  "tailwind.config.js"
-],
+    "dist",
+    "tailwind.config.js"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts && copy src\\styles\\globals.css dist\\globals.css",
     "dev": "tsup src/index.ts --format esm --dts --watch"
   },
   "peerDependencies": {
-    "react": "^18 || ^19",
-    "lucide-react": "^0.462.0"
+    "lucide-react": "^0.462.0",
+    "react": "^18 || ^19"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "lucide-react": "^0.462.0",
     "tsup": "^8.5.1",
-    "typescript": "^6.0.3",
-      "lucide-react": "^0.462.0"
+    "typescript": "^6.0.3"
   }
 }
