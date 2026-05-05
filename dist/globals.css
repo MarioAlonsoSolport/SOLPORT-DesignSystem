@@ -2,33 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Exo Soft';
-  src: url('/fonts/Exo Soft W00 Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Exo Soft';
-  src: url('/fonts/fonnts.com-Exo_Soft_Black.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #0f172a; /* azul oscuro */
   }
 
   body {
-    color: white;
-  }
-
-  * {
-    border-color: red !important;
+    font-family: monospace !important;
   }
 }
