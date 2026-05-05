@@ -1,6 +1,6 @@
 {
   "name": "@my-org/shared-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,10 +9,9 @@
     "./globals.css": "./dist/globals.css"
   },
   "files": [
-    "dist",
-    "tailwind.config.js",
-    "src/styles/global.css"
-  ],
+  "dist",
+  "tailwind.config.js"
+],
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts && copy src\\styles\\global.css dist\\globals.css",
     "dev": "tsup src/index.ts --format esm --dts --watch"
