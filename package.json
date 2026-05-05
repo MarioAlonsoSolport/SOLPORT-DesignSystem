@@ -5,10 +5,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
+    ".": "./dist/index.js",
+    "./globals.css": "./dist/globals.css"
   },
   "files": [
     "dist",
