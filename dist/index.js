@@ -67,7 +67,7 @@ function ContactSection() {
         }
       }
     ) }),
-    /* @__PURE__ */ jsxs2("div", { className: "relative mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-[1fr_1fr] lg:items-center", children: [
+    /* @__PURE__ */ jsxs2("div", { className: "relative mx-auto grid w-full max-w-6xl gap-10 md:grid-cols-[1fr_1fr] md:items-center", children: [
       /* @__PURE__ */ jsxs2("div", { children: [
         /* @__PURE__ */ jsxs2("p", { className: "inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-[#dde89f]", children: [
           /* @__PURE__ */ jsx3(Mail, { size: 12 }),
