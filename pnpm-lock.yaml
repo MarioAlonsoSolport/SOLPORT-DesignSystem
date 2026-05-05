@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      lucide-react:
-        specifier: ^0.462.0
-        version: 1.14.0(react@19.2.5)
       react:
         specifier: ^18 || ^19
         version: 19.2.5
@@ -21,6 +18,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.14)
+      lucide-react:
+        specifier: ^0.462.0
+        version: 0.462.0(react@19.2.5)
       tsup:
         specifier: ^8.5.1
         version: 8.5.1(typescript@6.0.3)
@@ -417,10 +417,10 @@ packages:
     resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  lucide-react@1.14.0:
-    resolution: {integrity: sha512-+1mdWcfSJVUsaTIjN9zoezmUhfXo5l0vP7ekBMPo3jcS/aIkxHnXqAPsByszMZx/Y8oQBRJxJx5xg+RH3urzxA==}
+  lucide-react@0.462.0:
+    resolution: {integrity: sha512-NTL7EbAao9IFtuSivSZgrAh4fZd09Lr+6MTkqIxuHaH2nnYiYIzXPo06cOxHg9wKLdj6LL8TByG4qpePqwgx/g==}
     peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -803,7 +803,7 @@ snapshots:
 
   load-tsconfig@0.2.5: {}
 
-  lucide-react@1.14.0(react@19.2.5):
+  lucide-react@0.462.0(react@19.2.5):
     dependencies:
       react: 19.2.5
 
