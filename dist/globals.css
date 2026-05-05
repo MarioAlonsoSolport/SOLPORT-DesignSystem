@@ -21,5 +21,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    background-color: #0f172a; /* azul oscuro */
+  }
+
+  body {
+    color: white;
+  }
+
+  * {
+    border-color: red !important;
   }
 }

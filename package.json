@@ -13,7 +13,7 @@
   "tailwind.config.js"
 ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts && copy src\\styles\\global.css dist\\globals.css",
+    "build": "tsup src/index.ts --format esm --dts && copy src\\styles\\globals.css dist\\globals.css",
     "dev": "tsup src/index.ts --format esm --dts --watch"
   },
   "peerDependencies": {
