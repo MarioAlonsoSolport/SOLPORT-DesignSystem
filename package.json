@@ -28,6 +28,6 @@
     "@types/react-dom": "^19.2.3",
     "lucide-react": "^0.462.0",
     "tsup": "^8.5.1",
-    "typescript": "^6.0.3"
+    "typescript": "^5.4.5"
   }
 }
