@@ -1,3 +1,4 @@
+'use client';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 export function AliciaTeaser() {
