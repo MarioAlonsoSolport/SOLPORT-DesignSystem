@@ -4,7 +4,7 @@ import {
   ArrowRight,
   Building2,
   Layers3,
-  Linkedin,
+  LinkedinIcon,
   Mail,
   MapPin,
   Phone,
@@ -84,7 +84,7 @@ export function ContactSection() {
             subHref="https://www.google.com/maps/search/?api=1&query=DFactory+Barcelona+Carrer+27+10-16+Sector+BZ+Sants-Montjuic+08040"
           />
           <ContactCard
-            icon={Linkedin}
+            icon={LinkedinIcon}
             label="LinkedIn"
             value="Solport Sistemas"
             href={LINKEDIN_URL}

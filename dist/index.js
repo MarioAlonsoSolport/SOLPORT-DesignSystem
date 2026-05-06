@@ -38,7 +38,7 @@ import {
   ArrowRight as ArrowRight2,
   Building2,
   Layers3,
-  Linkedin,
+  LinkedinIcon,
   Mail,
   MapPin,
   Phone
@@ -151,7 +151,7 @@ function ContactSection() {
         /* @__PURE__ */ jsx3(
           ContactCard,
           {
-            icon: Linkedin,
+            icon: LinkedinIcon,
             label: "LinkedIn",
             value: "Solport Sistemas",
             href: LINKEDIN_URL,
