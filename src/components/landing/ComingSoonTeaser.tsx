@@ -1,3 +1,4 @@
+'use client';
 import { Calculator, ScanLine, Sparkles, Workflow, type LucideIcon } from 'lucide-react';
 
 type Item = {
