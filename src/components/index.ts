@@ -3,5 +3,7 @@ export * from './DemoButton';
 export * from './landing/ContactSection';
 export * from './landing/AliciaTeaser';
 export * from './landing/ComingSoonTeaser';
+export * from './landing/WorldPresenceMap';
+
 
 

@@ -21,4 +21,11 @@ declare function AliciaTeaser(): react_jsx_runtime.JSX.Element;
 
 declare function ComingSoonTeaser(): react_jsx_runtime.JSX.Element;
 
-export { AliciaTeaser, Button, ComingSoonTeaser, ContactSection, DEMO_CTA_BASE_CLASS, DEMO_CTA_SIZE_CLASS, DemoButton };
+declare const PRESENCE_COUNTRIES: Record<string, string>;
+type Props = {
+    /** Clave inglesa del país (ej. "Spain") a iluminar de forma externa, p. ej. desde una lista. */
+    highlightedCountry?: string | null;
+};
+declare function WorldPresenceMap({ highlightedCountry }?: Props): react_jsx_runtime.JSX.Element;
+
+export { AliciaTeaser, Button, ComingSoonTeaser, ContactSection, DEMO_CTA_BASE_CLASS, DEMO_CTA_SIZE_CLASS, DemoButton, PRESENCE_COUNTRIES, WorldPresenceMap };

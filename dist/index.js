@@ -378,6 +378,103 @@ function ComingSoonTeaser() {
     }
   );
 }
+
+// src/components/landing/WorldPresenceMap.tsx
+import { useRef, useState } from "react";
+import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import { jsx as jsx6, jsxs as jsxs5 } from "react/jsx-runtime";
+var PRESENCE_COUNTRIES = {
+  Spain: "Espa\xF1a",
+  Portugal: "Portugal",
+  Panama: "Panam\xE1",
+  Colombia: "Colombia",
+  Peru: "Per\xFA",
+  Uruguay: "Uruguay",
+  Cuba: "Cuba",
+  Venezuela: "Venezuela",
+  "United States of America": "Estados Unidos de Am\xE9rica",
+  Romania: "Rumania",
+  "Eq. Guinea": "Guinea Ecuatorial",
+  Brazil: "Brasil"
+};
+function WorldPresenceMap({ highlightedCountry = null } = {}) {
+  const [hovered, setHovered] = useState(null);
+  const wrapperRef = useRef(null);
+  const trackPointer = (e, countryName) => {
+    const rect = wrapperRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    setHovered({
+      name: countryName,
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+  };
+  return /* @__PURE__ */ jsxs5(
+    "div",
+    {
+      ref: wrapperRef,
+      className: "relative overflow-hidden rounded-2xl border border-white/15 bg-white/[0.03] p-2 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-sm md:p-4",
+      children: [
+        /* @__PURE__ */ jsx6(
+          ComposableMap,
+          {
+            projection: "geoMercator",
+            projectionConfig: { scale: 135, center: [-25, 15] },
+            width: 1100,
+            height: 540,
+            style: { width: "100%", height: "auto" },
+            children: /* @__PURE__ */ jsx6(Geographies, { geography: "/world-atlas/countries-110m.json", children: ({
+              geographies
+            }) => geographies.map((geo) => {
+              const name = geo.properties.name;
+              const label = PRESENCE_COUNTRIES[name];
+              const isOn = Boolean(label);
+              const isHighlighted = isOn && name === highlightedCountry;
+              return /* @__PURE__ */ jsx6(
+                Geography,
+                {
+                  geography: geo,
+                  onMouseEnter: (e) => isOn && trackPointer(e, label),
+                  onMouseMove: (e) => isOn && trackPointer(e, label),
+                  onMouseLeave: () => setHovered(null),
+                  style: {
+                    default: {
+                      fill: isOn ? isHighlighted ? "#dde89f" : "#9fc778" : "rgba(255,255,255,0.07)",
+                      stroke: isOn ? isHighlighted ? "#9fc778" : "#113e61" : "rgba(255,255,255,0.18)",
+                      strokeWidth: isOn ? isHighlighted ? 1.2 : 0.8 : 0.4,
+                      outline: "none",
+                      cursor: isOn ? "pointer" : "default",
+                      transition: "fill 0.2s ease, stroke 0.2s ease"
+                    },
+                    hover: {
+                      fill: isOn ? "#dde89f" : "rgba(255,255,255,0.07)",
+                      stroke: isOn ? "#9fc778" : "rgba(255,255,255,0.18)",
+                      strokeWidth: isOn ? 1.2 : 0.4,
+                      outline: "none"
+                    },
+                    pressed: {
+                      fill: isOn ? "#9fc778" : "rgba(255,255,255,0.07)",
+                      outline: "none"
+                    }
+                  }
+                },
+                geo.rsmKey
+              );
+            }) })
+          }
+        ),
+        hovered && /* @__PURE__ */ jsx6(
+          "div",
+          {
+            className: "pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-full rounded-md bg-[#113e61] px-3 py-1.5 text-xs font-semibold text-white shadow-lg ring-1 ring-[#9fc778]/40",
+            style: { left: hovered.x, top: hovered.y - 8 },
+            children: hovered.name
+          }
+        )
+      ]
+    }
+  );
+}
 export {
   AliciaTeaser,
   Button,
@@ -385,5 +482,7 @@ export {
   ContactSection,
   DEMO_CTA_BASE_CLASS,
   DEMO_CTA_SIZE_CLASS,
-  DemoButton
+  DemoButton,
+  PRESENCE_COUNTRIES,
+  WorldPresenceMap
 };
