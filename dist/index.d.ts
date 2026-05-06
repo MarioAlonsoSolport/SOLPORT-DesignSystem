@@ -17,4 +17,6 @@ declare const DEMO_CTA_SIZE_CLASS: Record<"sm" | "md" | "lg", string>;
 
 declare function ContactSection(): react_jsx_runtime.JSX.Element;
 
-export { Button, ContactSection, DEMO_CTA_BASE_CLASS, DEMO_CTA_SIZE_CLASS, DemoButton };
+declare function AliciaTeaser(): react_jsx_runtime.JSX.Element;
+
+export { AliciaTeaser, Button, ContactSection, DEMO_CTA_BASE_CLASS, DEMO_CTA_SIZE_CLASS, DemoButton };
