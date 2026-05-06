@@ -293,9 +293,95 @@ function AliciaTeaser() {
     }
   ) }) });
 }
+
+// src/components/landing/ComingSoonTeaser.tsx
+import { Calculator, ScanLine, Sparkles as Sparkles2, Workflow } from "lucide-react";
+import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
+var ITEMS = [
+  {
+    icon: Workflow,
+    badge: "SP Truck \xB7 Pr\xF3ximamente",
+    title: "Optimizador de recursos y albaranes",
+    text: "SP Suite propondr\xE1 la mejor combinaci\xF3n de veh\xEDculos, conductores y rutas para cada albar\xE1n. Dejas de decidir a mano cada ma\xF1ana."
+  },
+  {
+    icon: ScanLine,
+    badge: "Todos los m\xF3dulos \xB7 Pr\xF3ximamente",
+    title: "Lectura autom\xE1tica de facturas",
+    text: "Las facturas de proveedor se leen solas y entran al circuito. Se acab\xF3 teclear importes, conceptos y bases imponibles."
+  },
+  {
+    icon: Calculator,
+    badge: "Pr\xF3ximamente",
+    title: "Contabilidad Solport",
+    text: "El m\xF3dulo contable de SP Suite. De la operativa al asiento y del asiento al balance, sin pasar por un sistema externo."
+  }
+];
+function ComingSoonTeaser() {
+  return /* @__PURE__ */ jsxs4(
+    "section",
+    {
+      id: "proximamente",
+      className: "relative overflow-hidden bg-[#0b263a] px-4 py-20 text-white",
+      children: [
+        /* @__PURE__ */ jsxs4("div", { className: "pointer-events-none absolute inset-0 opacity-[0.12]", children: [
+          /* @__PURE__ */ jsx5("div", { className: "absolute left-[-8rem] top-10 h-80 w-80 rounded-full bg-[#9fc778] blur-3xl" }),
+          /* @__PURE__ */ jsx5("div", { className: "absolute bottom-[-6rem] right-[-6rem] h-80 w-80 rounded-full bg-[#29677c] blur-3xl" })
+        ] }),
+        /* @__PURE__ */ jsxs4("div", { className: "relative mx-auto w-full max-w-6xl", children: [
+          /* @__PURE__ */ jsxs4("div", { className: "mb-10 max-w-2xl", children: [
+            /* @__PURE__ */ jsxs4("p", { className: "inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-[#dde89f]", children: [
+              /* @__PURE__ */ jsx5(Sparkles2, { size: 12 }),
+              " Pr\xF3ximamente"
+            ] }),
+            /* @__PURE__ */ jsxs4(
+              "h2",
+              {
+                className: "mt-4 text-3xl font-bold leading-tight md:text-4xl",
+                style: { fontFamily: "'Exo Soft','Exo 2',sans-serif" },
+                children: [
+                  "Lo que est\xE1 ",
+                  /* @__PURE__ */ jsx5("span", { className: "text-[#9fc778]", children: "a punto de llegar" }),
+                  " a SP Suite"
+                ]
+              }
+            ),
+            /* @__PURE__ */ jsx5("p", { className: "mt-5 text-base leading-relaxed text-white/80", children: "Tres piezas en las que estamos trabajando ahora mismo. Las ver\xE1s aterrizar en SP Suite antes de que te enteres." })
+          ] }),
+          /* @__PURE__ */ jsx5("div", { className: "grid gap-5 md:grid-cols-3", children: ITEMS.map((item) => {
+            const Icon = item.icon;
+            return /* @__PURE__ */ jsxs4(
+              "div",
+              {
+                className: "flex h-full flex-col gap-4 rounded-2xl border border-white/15 bg-white/[0.04] p-6 backdrop-blur-sm transition-all hover:border-[#9fc778]/45 hover:bg-white/[0.07]",
+                children: [
+                  /* @__PURE__ */ jsxs4("div", { className: "flex items-center justify-between gap-3", children: [
+                    /* @__PURE__ */ jsx5(
+                      "span",
+                      {
+                        className: "flex h-11 w-11 items-center justify-center rounded-xl",
+                        style: { backgroundColor: "rgba(159,199,120,0.18)", color: "#9fc778" },
+                        children: /* @__PURE__ */ jsx5(Icon, { size: 22, strokeWidth: 1.8 })
+                      }
+                    ),
+                    /* @__PURE__ */ jsx5("span", { className: "rounded-full border border-[#9fc778]/40 bg-[#9fc778]/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-[#dde89f]", children: item.badge })
+                  ] }),
+                  /* @__PURE__ */ jsx5("h3", { className: "text-lg font-bold leading-tight text-white", children: item.title }),
+                  /* @__PURE__ */ jsx5("p", { className: "text-sm leading-relaxed text-white/75", children: item.text })
+                ]
+              },
+              item.title
+            );
+          }) })
+        ] })
+      ]
+    }
+  );
+}
 export {
   AliciaTeaser,
   Button,
+  ComingSoonTeaser,
   ContactSection,
   DEMO_CTA_BASE_CLASS,
   DEMO_CTA_SIZE_CLASS,

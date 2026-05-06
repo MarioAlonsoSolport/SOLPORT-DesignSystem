@@ -19,4 +19,6 @@ declare function ContactSection(): react_jsx_runtime.JSX.Element;
 
 declare function AliciaTeaser(): react_jsx_runtime.JSX.Element;
 
-export { AliciaTeaser, Button, ContactSection, DEMO_CTA_BASE_CLASS, DEMO_CTA_SIZE_CLASS, DemoButton };
+declare function ComingSoonTeaser(): react_jsx_runtime.JSX.Element;
+
+export { AliciaTeaser, Button, ComingSoonTeaser, ContactSection, DEMO_CTA_BASE_CLASS, DEMO_CTA_SIZE_CLASS, DemoButton };
