@@ -4,7 +4,7 @@ import {
   ArrowRight,
   Building2,
   Layers3,
-  LinkedinIcon,
+  Linkedin,
   Mail,
   MapPin,
   Phone,
@@ -26,7 +26,7 @@ export function ContactSection() {
           }}
         />
       </div>
-      <div className="relative mx-auto grid w-full max-w-6xl gap-10 md:grid-cols-[1fr_1fr] md:items-center">
+      <div className="relative mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-[#dde89f]">
             <Mail size={12} /> Hablemos
@@ -84,7 +84,7 @@ export function ContactSection() {
             subHref="https://www.google.com/maps/search/?api=1&query=DFactory+Barcelona+Carrer+27+10-16+Sector+BZ+Sants-Montjuic+08040"
           />
           <ContactCard
-            icon={LinkedinIcon}
+            icon={Linkedin}
             label="LinkedIn"
             value="Solport Sistemas"
             href={LINKEDIN_URL}
